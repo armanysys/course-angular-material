@@ -11,6 +11,9 @@ import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { TreeDemoComponent } from './tree-demo/tree-demo.component';
 import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling.component';
 
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { CoursesService } from './services/courses.service';
+
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button'
@@ -39,6 +42,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTreeModule } from '@angular/material/tree';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     CreateCourseComponent,
     DragDropComponent,
     TreeDemoComponent,
-    VirtualScrollingComponent
+    VirtualScrollingComponent,
+    CoursesCardListComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +88,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatTreeModule,
     ScrollingModule
   ],
-  providers: [],
+  providers: [
+    CoursesService,
+    provideHttpClient(withInterceptorsFromDi()),],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
