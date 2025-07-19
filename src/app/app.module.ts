@@ -43,6 +43,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTreeModule } from '@angular/material/tree';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
+import { CreateCourseStep1Component } from './create-course/create-course-step-1/create-course-step-1.component';
+import { CreateCourseStep2Component } from './create-course/create-course-step-2/create-course-step-2.component';
 
 @NgModule({
   declarations: [
@@ -54,8 +56,10 @@ import { CoursesCardListComponent } from './courses-card-list/courses-card-list.
     DragDropComponent,
     TreeDemoComponent,
     VirtualScrollingComponent,
-    CoursesCardListComponent
-  ],
+    CoursesCardListComponent,
+    CreateCourseStep1Component,
+    CreateCourseStep2Component
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
