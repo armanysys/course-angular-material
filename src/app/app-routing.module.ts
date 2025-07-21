@@ -7,8 +7,7 @@ import { CreateCourseComponent } from './create-course/create-course.component';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
 import { TreeDemoComponent } from './tree-demo/tree-demo.component';
 import { VirtualScrollingComponent } from './virtual-scrolling/virtual-scrolling.component';
-
-
+import { courseResolver } from './services/course.resolver';
 
 const routes: Routes = [
   {
@@ -23,7 +22,7 @@ const routes: Routes = [
     path: 'courses/:id',
     component: CourseComponent,
     resolve: {
-      // course: courseResolver
+      course: courseResolver
     }
   },
   {
