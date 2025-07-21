@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '../model/course';
+import { openEditCourseDialog } from '../course-dialog/course-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-courses-card-list',
@@ -14,11 +17,18 @@ export class CoursesCardListComponent implements OnInit {
   rowHeight = '500px';
   handsetPortrait = false;
 
-  constructor() { }
+  constructor(private dialog: MatDialog,) { }
 
   ngOnInit(): void {
   }
 
   editCourse(course: Course) {
+    openEditCourseDialog(this.dialog, course)
+      .pipe(
+        filter(val => !!val)
+      )
+      .subscribe(
+        val => console.log('new course value:', val)
+      );
   }
 }

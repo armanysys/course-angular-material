@@ -45,6 +45,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CoursesCardListComponent } from './courses-card-list/courses-card-list.component';
 import { CreateCourseStep1Component } from './create-course/create-course-step-1/create-course-step-1.component';
 import { CreateCourseStep2Component } from './create-course/create-course-step-2/create-course-step-2.component';
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { CreateCourseStep2Component } from './create-course/create-course-step-2
     VirtualScrollingComponent,
     CoursesCardListComponent,
     CreateCourseStep1Component,
-    CreateCourseStep2Component
+    CreateCourseStep2Component,
+    CourseDialogComponent
     ],
   imports: [
     BrowserModule,
