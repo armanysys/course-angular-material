@@ -30,7 +30,7 @@ const routes: Routes = [
     component: CreateCourseComponent
   },
   {
-    path: "drag-drop-example",
+    path: "drag-drop",
     component: DragDropComponent
   },
   {
