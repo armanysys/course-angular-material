@@ -99,9 +99,9 @@ $theme: mat.m2-define-light-theme((
 
 @include mat.all-component-themes($theme);
 
-// @import "./mixins";
+@import "./mixins";
 
-// @include responsive-dialogs();
+@include responsive-dialogs();
 
 .highlight-date {
   background: red;

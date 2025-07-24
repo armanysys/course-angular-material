@@ -1,59 +1,37 @@
-# PricingProject
+## Angular Material Course
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+This repository contains the code of the Angular Material In Depth.
 
-## Development server
+This course use Angular 20:
 
-To start a local development server, run:
+![Angular Material In Depth](https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-material-course-1.jpg)
 
-```bash
-ng serve
-```
+# Installation pre-requisites
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+IMPORTANT: Please use Node 22 LTS (Long Term Support version).
 
-## Code scaffolding
+# Installing the Angular CLI
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+With the following command the angular-cli will be installed globally in your machine:
 
-```bash
-ng generate component component-name
-```
+    npm install -g @angular/cli 
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+# To Run the Development Backend Server
 
-```bash
-ng generate --help
-```
+Our Angular frontend connects to a simple Node server, running also in your local development machine.
 
-## Building
+We can start the sample application backend with the following command:
 
-To build the project run:
+    npm run server
 
-```bash
-ng build
-```
+# To run the Development UI Server
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Once the backend server is up and running, we can now run our frontend server. 
 
-## Running unit tests
+To run the frontend part of our code, we will use the Angular CLI:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+    npm start 
 
-```bash
-ng test
-```
+The application is visible at port 4200: [http://localhost:4200](http://localhost:4200)
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Note: **make sure to use command npm start and not ng serve, as npm start adds a couple extra options that are needed for our project **
